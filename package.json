@@ -2,11 +2,15 @@
   "name": "js-spa-cientifico",
   "version": "1.0.0",
   "description": "una spa del curso de platzi basada en al api de rick&morty",
+  "repository": {
+    "url": "git+github.com/h4roru4zure/h4roru4zure.github.io.git"
+  },
   "main": "index.js",
   "scripts": {
-    "build": "webpack --mode production",
+    "build": "webpack --mode=development",
     "start": "webpack-dev-server --open --mode  development",
-    "deploy" : "gh-pages -d src"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "keywords": [
     "javascritp"
